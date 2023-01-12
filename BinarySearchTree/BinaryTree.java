@@ -44,12 +44,28 @@ public class BinaryTree<V extends Comparable> {
 
     }
 
-    public static void main(String[] args) {
-        BinaryTree tree = new BinaryTree();
-        tree.add(56);
-        tree.add(30);
-        tree.add(70);
-        tree.displayTree();
+    void search(V data){
+        MyBinaryNode n = root;
+        while(true){
+            if(n.getValue().equals(data)){
+                System.out.println("Value found ");
+                break;
+            }
+            if(n.getValue().compareTo(data)>0 && n.left !=null){
+                n=n.left;
+                System.out.println("Node is at left side");
+                continue;
+            }else if(n.getValue().compareTo(data)<0 && n.right !=null){
+                n=n.right;
+                System.out.println("Node is at right side");
+            }else {
+                System.out.println("Value not found");
+                break;
+            }
+
+        }
     }
+
+
 
 }
