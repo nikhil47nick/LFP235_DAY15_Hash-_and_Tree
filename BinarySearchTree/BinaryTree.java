@@ -42,7 +42,14 @@ public class BinaryTree<V extends Comparable> {
         System.out.println("Left Node : "+n.left.getValue());
         System.out.println("right Node : "+n.right.getValue());
 
+    }
 
+    public static void main(String[] args) {
+        BinaryTree tree = new BinaryTree();
+        tree.add(56);
+        tree.add(30);
+        tree.add(70);
+        tree.displayTree();
     }
 
 }
