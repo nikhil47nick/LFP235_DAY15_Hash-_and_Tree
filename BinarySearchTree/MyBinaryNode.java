@@ -4,12 +4,14 @@ public class MyBinaryNode<V extends Comparable> implements INode {
     private V value;
     MyBinaryNode left,right;
 
-   public V getValue(){
-        return value;
+    public MyBinaryNode(V data){
+        this.value = data;
+        this.left = null;
+        this.right = null;
     }
 
-    public void setValue(Object value) {
-        this.value = (V) value;
+   public V getValue(){
+        return value;
     }
 
 }

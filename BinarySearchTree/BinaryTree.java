@@ -7,8 +7,7 @@ public class BinaryTree<V extends Comparable> {
 
 
     public <V extends Comparable> void add(V data){
-        MyBinaryNode node = new MyBinaryNode();
-        node.setValue(data);
+        MyBinaryNode node = new MyBinaryNode(data);
 
         if(root == null){
             root = node;
